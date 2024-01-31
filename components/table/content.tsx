@@ -1,5 +1,5 @@
 import { dataRowContextType } from "@/context/dataRowContext";
-import { TableCell, TableRow } from "@mui/material";
+import { Button, TableCell, TableRow } from "@mui/material";
 import React from "react";
 
 export default function ContentTabel({ row }: { row: dataRowContextType }) {
@@ -15,7 +15,9 @@ export default function ContentTabel({ row }: { row: dataRowContextType }) {
       <TableCell align="left">{row.label}</TableCell>
       <TableCell align="left">
         {typeof row.value === "function" ? (
-          <button onClick={row.value}>click</button>
+          <Button variant="contained" onClick={row.value} color="secondary">
+            Click
+          </Button>
         ) : (
           row.value
         )}

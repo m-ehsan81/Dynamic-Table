@@ -2,12 +2,7 @@
 
 import { useState } from "react";
 
-import {
-  Table,
-  TableBody,
-  TableContainer,
-  Paper,
-} from "@mui/material";
+import { Table, TableBody, TableContainer, Paper } from "@mui/material";
 
 import { useDataRowContext } from "@/context/dataRowContext";
 import FooterTable from "@/components/table/footer";
@@ -21,7 +16,7 @@ export default function BasicTable() {
   const data = useDataRowContext();
 
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} sx={{ maxWidth: 1000, mx: "auto" }}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <caption>caption</caption>
         <HeaderTable />
